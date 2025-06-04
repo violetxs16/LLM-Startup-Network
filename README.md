@@ -130,27 +130,8 @@ For deploying this network simulation in a production learning environment:
 * **Python** - Programming language for controller logic
 * **Virtual Machine Technology** - Isolated environment for network simulation
 
-## **Contributing**
-
-Please read the course guidelines for details on academic integrity policies and collaboration rules for educational projects.
-
-## **Versioning**
-
-This project follows academic semester versioning. For different iterations, see the course assignment history.
-
 ## **Authors**
 
 * **Violeta Solorio** - *Implementation and Testing* - violetxs16
-* **Course Instructor** - *Project Requirements and Starter Code*
+* **Course Instructor** - *Starter Code*
 
-## **License**
-
-This project is developed for educational purposes as part of a computer networks course. Please respect academic integrity policies when referencing or building upon this work.
-
-## **Acknowledgments**
-
-* Course instructor and TAs for providing starter code and project structure
-* Mininet development team for the excellent network emulation platform
-* POX controller developers for the SDN framework
-* OpenFlow community for standardizing software-defined networking protocols
-* Fellow students for collaborative learning and concept discussions
