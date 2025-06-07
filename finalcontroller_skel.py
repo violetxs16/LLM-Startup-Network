@@ -76,7 +76,7 @@ class Final (object):
 
   def do_final(self, packet, packet_in, port_on_switch, switch_id):
     #determine what type of packet is coming in: ICMP, TCP?
-    if(switch_id == 1): #core switch -> all main logic will be here
+    if(switch_id == '0000000000000001'): #core switch -> all main logic will be here
         if(packet.find('icmp')):
             #step 1: get header information
             header = packet.find('ipv4')
@@ -303,7 +303,7 @@ class Final (object):
             header = packet.find('ipv4')
             
             #floor 1 switch 1 - hosts 101, 102
-            if(switch_id == 2):
+            if(switch_id == '0000000000000002'):
                 if(header.dstip == '128.114.1.101'):
                     match = of.ofp_match(dl_type = 0x0800, nw_dst = '128.114.1.101')
                     self.send_packet_format(packet_in, 1, match)
@@ -316,7 +316,7 @@ class Final (object):
                     self.send_packet_format(packet_in, 20, match)
                     
             #floor 1 switch 2 - hosts 103, 104
-            elif(switch_id == 3):
+            elif(switch_id == '0000000000000003'):
                 if(header.dstip == '128.114.1.103'):
                     match = of.ofp_match(dl_type = 0x0800, nw_dst = '128.114.1.103')
                     self.send_packet_format(packet_in, 1, match)
@@ -329,7 +329,7 @@ class Final (object):
                     self.send_packet_format(packet_in, 20, match)
                     
             #floor 2 switch 1 - hosts 201, 202
-            elif(switch_id == 4):
+            elif(switch_id == '0000000000000004'):
                 if(header.dstip == '128.114.2.201'):
                     match = of.ofp_match(dl_type = 0x0800, nw_dst = '128.114.2.201')
                     self.send_packet_format(packet_in, 1, match)
@@ -342,7 +342,7 @@ class Final (object):
                     self.send_packet_format(packet_in, 20, match)
                     
             #floor 2 switch 2 - hosts 203, 204
-            elif(switch_id == 5):
+            elif(switch_id == '0000000000000005'):
                 if(header.dstip == '128.114.2.203'):
                     match = of.ofp_match(dl_type = 0x0800, nw_dst = '128.114.2.203')
                     self.send_packet_format(packet_in, 1, match)
@@ -355,7 +355,7 @@ class Final (object):
                     self.send_packet_format(packet_in, 20, match)
                     
             #data center switch - server
-            elif(switch_id == 6):
+            elif(switch_id == '0000000000000006'):
                 if(header.dstip == '128.114.3.178'):
                     match = of.ofp_match(dl_type = 0x0800, nw_dst = '128.114.3.178')
                     self.send_packet_format(packet_in, 1, match)

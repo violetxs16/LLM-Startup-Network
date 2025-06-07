@@ -12,12 +12,12 @@ from mininet.node import RemoteController
 class final_topo(Topo):
   def build(self):
     #Create Switches
-    core = self.addSwitch('core', dpid = 1)
-    f1s1 = self.addSwitch('f1s1', dpid = 2)
-    f1s2 = self.addSwitch('f1s2', dpid = 3)
-    f2s1 = self.addSwitch('f2s1', dpid = 4)
-    f2s2 = self.addSwitch('f2s2', dpid = 5)
-    dcs = self.addSwitch('dcs', dpid = 6)
+    core = self.addSwitch('core', dpid = '0000000000000001')
+    f1s1 = self.addSwitch('f1s1', dpid = '0000000000000002')
+    f1s2 = self.addSwitch('f1s2', dpid = '0000000000000003')
+    f2s1 = self.addSwitch('f2s1', dpid = '0000000000000004')
+    f2s2 = self.addSwitch('f2s2', dpid = '0000000000000005')
+    dcs = self.addSwitch('dcs', dpid = '0000000000000006')
     #Connect switches to switches
     self.addLink(core, f1s1, port1 = 22, port2 = 20) #first floor switch 1 to core switch
     self.addLink(core, f1s2, port1 = 23, port2 = 20) #first floor switch 2 to core switch
