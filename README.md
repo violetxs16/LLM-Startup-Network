@@ -57,13 +57,7 @@ cp final.py ~/
 # Test mininet installation
 sudo mn --test pingall
 ```
-
-End with an example of getting the basic network running for a simple connectivity test.
-
 ## **Running the tests**
-
-Explain how to run the automated tests for this system:
-
 **Step 1: Start the POX controller**
 ```bash
 cd ~/pox
@@ -81,8 +75,6 @@ mininet> pingall
 ```
 
 ## **Sample Tests**
-
-Explain what these tests verify regarding the network security policies:
 
 **Test ICMP blocking between departments**
 ```bash
