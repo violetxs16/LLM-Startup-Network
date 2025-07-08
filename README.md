@@ -2,8 +2,6 @@
 
 A network simulation project implementing routing and firewall functionality for a Large Language Model (LLM) startup company. This project creates a multi-floor corporate network topology with specific security policies using Mininet for network emulation and POX controller for Software-Defined Networking (SDN). The implementation includes sophisticated traffic filtering between departments, trusted/untrusted external hosts, and critical server infrastructure.
 
-Initially developed as a computer networks course final project to demonstrate practical SDN concepts and network security implementation.
-
 ## **Getting Started**
 
 These instructions will give you a copy of the project up and running on your local machine for development and testing purposes. The project requires a virtual machine environment with Mininet and POX controller pre-installed for proper network simulation.
@@ -20,8 +18,6 @@ Requirements for the software and other tools to build, test and run the network
 * **OpenFlow** - Software-defined networking protocol support
 
 ## **Installing**
-
-A step by step series of examples that tell you how to get a development environment running:
 
 **Step 1: Set up your VM environment**
 ```bash
